@@ -1,6 +1,6 @@
 Tsup::Application.routes.draw do
-  resources :messages
-  root :to => 'messages#view'
+  resources :messages, only: [ :index, :create ]
+  root :to => 'messages#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

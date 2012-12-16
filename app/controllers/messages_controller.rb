@@ -4,7 +4,7 @@ class MessagesController < ActionController::Base
     Message.create( params['message'] )
   end
 
-  def view
+  def index
     @messages = Message.all
   end
 
