@@ -6,7 +6,13 @@ gem 'bootstrap-sass', '2.1'
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
+end
+
+group :test do
+  gem 'cucumber'
+  gem 'cucumber-rails'
   gem 'capybara'
+  gem 'database_cleaner'
 end
 
 group :assets do
