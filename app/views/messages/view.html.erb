@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tsup | Messages</title>
+  </head>
+  <body>
+    <h1>Messages</h1>
+    <p>
+    <% @messages.each do | message | %>
+      <%= message.content %>
+    <% end %>
+    </p>
+  </body>
+</html>
+
