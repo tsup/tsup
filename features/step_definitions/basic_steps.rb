@@ -18,6 +18,10 @@ When /^I visit the "(.*?)" page$/ do | page |
 end
 
 Then /^I should see "(.*?)"$/ do | text |
-  page.should have_content( text )
+  page.should have_content text
+end
+
+Then /^"(.*?)" should precede "(.*?)"$/ do | first_text, second_text |
+  page.text.should match /#{first_text}.*#{second_text}/m
 end
 
