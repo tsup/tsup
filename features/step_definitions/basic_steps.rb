@@ -7,6 +7,12 @@ Given /^I post "(.*?)" on the REST interface$/ do | message |
   post "/messages/", json_message.to_json
 end
 
+Given /^I post "(.*?)" on the web interface$/ do | message |
+  visit "/"
+  fill_in 'message_content', with: "#{message}"
+  click_button "Post"
+end
+
 When /^I visit the "(.*?)" page$/ do | page |
   visit page
 end
