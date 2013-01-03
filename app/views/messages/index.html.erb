@@ -5,16 +5,14 @@
   </head>
   <body>
     <h1>Messages</h1>
-      <%= form_for( @message ) do | form | %>
-        <%= form.label :content %>
-        <%= form.text_field :content %>
-        <%= form.submit "Post", class: "btn btn-large btn-primary" %>
-      <% end %>
-      <% @messages.each do | message | %>
-        <%= message.content %> <br \>
-      <% end %>
-    </div>
-
+    <%= form_for( @message ) do | form | %>
+      <%= form.label :content %>
+      <%= form.text_field :content %>
+      <%= form.submit "Post", class: "btn btn-large btn-primary" %>
+    <% end %>
+    <% @messages.each do | message | %>
+      <%= message.content %> <br \>
+    <% end %>
   </body>
 </html>
 
