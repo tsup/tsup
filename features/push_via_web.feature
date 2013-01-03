@@ -13,4 +13,5 @@ Feature: Pushing message from web interface
     When I post "42" on the web interface
     Then I should see "42"
     And I should see "foo"
+    And "42" should precede "foo"
 

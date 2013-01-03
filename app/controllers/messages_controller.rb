@@ -7,7 +7,7 @@ class MessagesController < ActionController::Base
 
   def index
     @message = Message.new
-    @messages = Message.all
+    @messages = Message.all.reverse
   end
 
 end
