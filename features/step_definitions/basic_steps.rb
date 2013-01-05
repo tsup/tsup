@@ -1,15 +1,15 @@
 require 'json'
 
-Given /^I post "(.*?)" on the REST interface$/ do | message |
+Given /^I post "(.*?)" on the REST interface$/ do | tsup |
   header 'Accept', 'application/json'
   header 'Content-Type', 'application/json'
-  json_message = { :content => message }
+  json_message = { :content => tsup }
   post "/messages/", json_message.to_json
 end
 
-Given /^I post "(.*?)" on the web interface$/ do | message |
+Given /^I post "(.*?)" on the web interface$/ do | tsup |
   visit "/"
-  fill_in 'message_content', with: "#{message}"
+  fill_in 'message_content', with: "#{tsup}"
   click_button "Post"
 end
 
