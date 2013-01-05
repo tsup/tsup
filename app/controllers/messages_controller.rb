@@ -2,10 +2,12 @@ class MessagesController < ActionController::Base
 
   def create
     Message.create( params['message'] )
+    redirect_to root_url
   end
 
   def index
-    @messages = Message.all
+    @message = Message.new
+    @messages = Message.all.reverse
   end
 
 end

@@ -1,16 +1,16 @@
-Feature: Push a message
+Feature: Post a tsup
   In order to have impact
-  As a Pusher
-  I'd like to push yo
+  As a tsuper
+  I'd like to post yo
 
   Background:
     Given I post "foo" on the REST interface
 
-  Scenario: Pushing a message
+  Scenario: Posting a tsup
     When I visit the "/" page
     Then I should see "foo"
 
-  Scenario: Posting more message
+  Scenario: Posting more tsups
     When I post "42" on the REST interface
     When I visit the "/" page
     Then I should see "42"
