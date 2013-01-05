@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Tsup::Application.load_tasks
+Tsupapp::Application.load_tasks

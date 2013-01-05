@@ -1,4 +1,4 @@
-Tsup::Application.routes.draw do
+Tsupapp::Application.routes.draw do
   resources :messages, only: [ :index, :create ]
   root :to => 'messages#index'
 
