@@ -4,12 +4,12 @@ Given /^I post "(.*?)" on the REST interface$/ do | tsup |
   header 'Accept', 'application/json'
   header 'Content-Type', 'application/json'
   json_message = { :content => tsup }
-  post "/messages/", json_message.to_json
+  post "/tsups/", json_message.to_json
 end
 
 Given /^I post "(.*?)" on the web interface$/ do | tsup |
   visit "/"
-  fill_in 'message_content', with: "#{tsup}"
+  fill_in 'tsup_content', with: "#{tsup}"
   click_button "Post"
 end
 
