@@ -1,6 +1,6 @@
-Tsup::Application.routes.draw do
-  resources :messages, only: [ :index, :create ]
-  root :to => 'messages#index'
+Tsupapp::Application.routes.draw do
+  resources :tsups, only: [ :index, :create ]
+  root :to => 'tsups#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
