@@ -1,11 +1,17 @@
 <% provide :title, "Tsups" %>
-<h1>Tsups</h1>
-<%= form_for( @tsup ) do | form | %>
-  <%= form.label :content %>
-  <%= form.text_field :content %>
-  <%= form.submit "Post", class: "btn btn-large btn-primary" %>
+<% provide :logo_path, "https://dl.dropbox.com/s/8z4izit59dfvva2/trans32.png" %>
+
+<% provide :post_tsup do %>
+  <% form_for( @tsup, html: { class: 'navbar-form' } ) do | form | %>
+    <div class="input-append">
+      <%= form.text_field :content, id: 'appendedInputButton', class: 'span2' %>
+      <%= form.submit "Post", class: "btn btn-primary" %>
+    </div>
+  <% end %>
 <% end %>
 <% @tsups.each do | tsup | %>
-  <%= tsup.content %> <br \>
+  <div class="well well-small">
+    <%= tsup.content %> <br \>
+  </div>
 <% end %>
 
