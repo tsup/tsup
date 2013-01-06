@@ -1,4 +1,4 @@
-class TsupsController < ActionController::Base
+class TsupsController < ApplicationController
 
   def create
     Tsup.create( params['tsup'] )
