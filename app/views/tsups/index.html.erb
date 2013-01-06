@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Tsup | Tsups</title>
-  </head>
-  <body>
-    <h1>Tsups</h1>
-    <%= form_for( @tsup ) do | form | %>
-      <%= form.label :content %>
-      <%= form.text_field :content %>
-      <%= form.submit "Post", class: "btn btn-large btn-primary" %>
-    <% end %>
-    <% @tsups.each do | tsup | %>
-      <%= tsup.content %> <br \>
-    <% end %>
-  </body>
-</html>
+<% provide :title, "Tsups" %>
+<h1>Tsups</h1>
+<%= form_for( @tsup ) do | form | %>
+  <%= form.label :content %>
+  <%= form.text_field :content %>
+  <%= form.submit "Post", class: "btn btn-large btn-primary" %>
+<% end %>
+<% @tsups.each do | tsup | %>
+  <%= tsup.content %> <br \>
+<% end %>
 
