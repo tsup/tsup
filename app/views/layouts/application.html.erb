@@ -12,10 +12,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header class="navbar navbar-fixed-top">
-    <nav class="navber-inner">
+  <header class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar-inner">
       <div class="container">
         <nav>
+          <%= link_to(image_tag(yield(:logo_path) ), root_path, :class => 'brand')%>
+          <%= yield(:post_tsup) %>
         </nav>
       </div>
     </nav>
@@ -23,11 +25,7 @@
   <div id="main" role="main">
     <div class="container">
       <div class="content">
-        <div class="row">
-          <div class="span12">
-            <%= yield %>
-          </div>
-        </div>
+          <%= yield %>
         <footer></footer>
       </div>
     </div>

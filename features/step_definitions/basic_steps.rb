@@ -9,7 +9,7 @@ end
 
 Given /^I post "(.*?)" on the web interface$/ do | tsup |
   visit "/"
-  fill_in 'tsup_content', with: "#{tsup}"
+  fill_in 'tsup[content]', with: "#{tsup}"
   click_button "Post"
 end
 
